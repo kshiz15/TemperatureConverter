@@ -6,6 +6,7 @@
  * @returns {number} temperature in °C
  */
 function convertToCelsius(f) {
+  return (f - 32) * 0.556;
   // TODO
 }
 
@@ -23,6 +24,17 @@ function convertToCelsius(f) {
  * the given Fahrenheit temperature `f`
  */
 function describeTemperature(f) {
+  let message = " ";
+  if (f < 32) {
+    message = "very cold";
+  } else if (32 < f < 64) {
+    message = "cold";
+  } else if (64 < f < 86) {
+    message = "warm";
+  } else if (86 < f < 100) {
+    message = "hot";
+  }
+  return message;
   // TODO
 }
 
