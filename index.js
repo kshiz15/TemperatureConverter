@@ -33,6 +33,8 @@ function describeTemperature(f) {
     message = "warm";
   } else if (86 < f < 100) {
     message = "hot";
+  } else {
+    message = "veryhot";
   }
   return message;
   // TODO
@@ -43,8 +45,10 @@ function describeTemperature(f) {
  * @returns {number} a random integer in the range [0, `limit`)
  */
 function getRandomInt(limit) {
-  // TODO
+  return Math.floor(Math.random() * 110);
 }
+
+// TODO
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
 /**
